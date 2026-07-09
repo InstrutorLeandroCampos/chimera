@@ -9,9 +9,10 @@
 <body>
   <main class="status-page">
     <h1 class="status-page__title">Chimera</h1>
-    <p>Servidor Host no ar. A biblioteca de jogos chega na Fase 5.</p>
-    <span class="status-pill"><span class="status-pill__dot"></span>Conectado ao Host</span>
+    <p class="status-page__message">Conectando ao Host...</p>
+    <span class="status-pill"><span class="status-pill__dot"></span>Aguardando stream</span>
   </main>
+  <video id="player" autoplay playsinline hidden></video>
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
