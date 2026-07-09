@@ -1,0 +1,53 @@
+@import url("tokens.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-surface-soft);
+  color: var(--color-body);
+  font-family: var(--font-family);
+  font-size: var(--text-body-md-size);
+  font-weight: var(--text-body-md-weight);
+  line-height: var(--text-body-md-line);
+}
+
+.status-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  text-align: center;
+  padding: var(--space-xxl);
+}
+
+.status-page__title {
+  margin: 0;
+  color: var(--color-ink);
+  font-size: var(--text-heading-xl-size);
+  font-weight: var(--text-heading-xl-weight);
+  line-height: var(--text-heading-xl-line);
+  letter-spacing: var(--text-heading-xl-tracking);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background-color: var(--color-surface-card);
+  color: var(--color-ink);
+  border-radius: var(--radius-full);
+  padding: var(--space-sm) var(--space-lg);
+  font-size: var(--text-body-sm-size);
+}
+
+.status-pill__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-success-deep);
+}
