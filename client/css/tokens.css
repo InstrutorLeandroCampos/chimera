@@ -1,0 +1,95 @@
+/*
+ * Design tokens ported from skills/design/DESIGN.md (Pinterest-derived system).
+ * Pin Sans is proprietary — Inter is the documented open-source substitute,
+ * with Manrope as the display-tier alternative. -1.2px tracking is kept on
+ * display/heading-xl per the system's "Note on Font Substitutes".
+ */
+:root {
+  /* Color */
+  --color-primary: #e60023;
+  --color-on-primary: #ffffff;
+  --color-primary-pressed: #cc001f;
+  --color-ink: #000000;
+  --color-ink-soft: #211922;
+  --color-body: #33332e;
+  --color-charcoal: #262622;
+  --color-mute: #62625b;
+  --color-ash: #91918c;
+  --color-stone: #c8c8c1;
+  --color-hairline: #dadad3;
+  --color-hairline-soft: #e5e5e0;
+  --color-on-secondary: #000000;
+  --color-secondary-bg: #e5e5e0;
+  --color-secondary-pressed: #c8c8c1;
+  --color-canvas: #ffffff;
+  --color-surface-soft: #fbfbf9;
+  --color-surface-card: #f6f6f3;
+  --color-surface-elevated: #ffffff;
+  --color-on-dark: #ffffff;
+  --color-on-dark-mute: rgba(255, 255, 255, 0.7);
+  --color-surface-dark: #262622;
+  --color-focus-outer: #435ee5;
+  --color-focus-inner: #ffffff;
+  --color-error: #9e0a0a;
+  --color-error-deep: #cc001f;
+  --color-success-deep: #103c25;
+  --color-success-pale: #c7f0da;
+
+  /* Typography */
+  --font-family: "Inter", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --text-display-xl-size: 70px;
+  --text-display-xl-weight: 600;
+  --text-display-xl-line: 1.1;
+  --text-display-xl-tracking: -1.2px;
+
+  --text-heading-xl-size: 28px;
+  --text-heading-xl-weight: 700;
+  --text-heading-xl-line: 1.2;
+  --text-heading-xl-tracking: -1.2px;
+
+  --text-heading-lg-size: 22px;
+  --text-heading-lg-weight: 600;
+  --text-heading-lg-line: 1.25;
+
+  --text-heading-md-size: 18px;
+  --text-heading-md-weight: 600;
+  --text-heading-md-line: 1.3;
+
+  --text-body-md-size: 16px;
+  --text-body-md-weight: 400;
+  --text-body-md-line: 1.4;
+
+  --text-body-strong-size: 16px;
+  --text-body-strong-weight: 600;
+  --text-body-strong-line: 1.4;
+
+  --text-body-sm-size: 14px;
+  --text-body-sm-weight: 400;
+  --text-body-sm-line: 1.4;
+
+  --text-caption-md-size: 12px;
+  --text-caption-md-weight: 500;
+  --text-caption-md-line: 1.5;
+
+  --text-button-md-size: 14px;
+  --text-button-md-weight: 700;
+  --text-button-md-line: 1;
+
+  /* Shape */
+  --radius-none: 0px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 32px;
+  --radius-full: 9999px;
+
+  /* Spacing */
+  --space-xxs: 4px;
+  --space-xs: 6px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+  --space-xxl: 32px;
+  --space-section: 64px;
+}
