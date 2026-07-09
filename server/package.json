@@ -1,0 +1,20 @@
+{
+  "name": "chimera-server",
+  "version": "0.1.0",
+  "description": "Chimera Host — captura, codifica e transmite tela/audio, injeta input",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "validate:gpu": "tsx scripts/validate-gpu.ts",
+    "validate:capture": "tsx scripts/validate-capture.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
