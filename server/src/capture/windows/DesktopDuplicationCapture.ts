@@ -2,8 +2,7 @@ import { spawn, type ChildProcessWithoutNullStreams } from "node:child_process";
 import { mkdir } from "node:fs/promises";
 import { dirname } from "node:path";
 import type { CaptureOptions, CaptureResult, ICaptureSource } from "../ICaptureSource.js";
-
-type WindowsCaptureInput = "ddagrab" | "gdigrab";
+import { detectWindowsCaptureInput, type WindowsCaptureInput } from "./detectCaptureInput.js";
 
 /**
  * Windows screen capture backed by FFmpeg. Prefers `ddagrab` (DXGI Desktop
@@ -82,19 +81,6 @@ export class DesktopDuplicationCapture implements ICaptureSource {
   isCapturing(): boolean {
     return this.process !== null;
   }
-}
-
-async function detectWindowsCaptureInput(): Promise<WindowsCaptureInput> {
-  const supportsDdagrab = await new Promise<boolean>((resolve) => {
-    const proc = spawn("ffmpeg", ["-hide_banner", "-h", "demuxer=ddagrab"]);
-    let output = "";
-    proc.stdout.on("data", (c) => (output += c));
-    proc.stderr.on("data", (c) => (output += c));
-    proc.once("close", () => resolve(!/unknown format/i.test(output)));
-    proc.once("error", () => resolve(false));
-  });
-
-  return supportsDdagrab ? "ddagrab" : "gdigrab";
 }
 
 function buildFfmpegArgs(input: WindowsCaptureInput, options: CaptureOptions): string[] {
