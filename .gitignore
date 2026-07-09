@@ -2,3 +2,4 @@ node_modules/
 dist/
 .tmp-capture/
 *.log
+.claude/settings.local.json
