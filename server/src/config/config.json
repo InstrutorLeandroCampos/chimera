@@ -1,0 +1,11 @@
+{
+  "server": {
+    "port": 4455,
+    "clientStaticDir": "../../client"
+  },
+  "capture": {
+    "monitorIndex": 0,
+    "fps": 30,
+    "outputDir": "../../.tmp-capture"
+  }
+}
